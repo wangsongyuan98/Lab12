@@ -44,6 +44,7 @@ public final class MainActivity extends AppCompatActivity {
 
         // Attach the handler to our UI button
         final Button startAPICall = findViewById(R.id.startAPICall);
+        final Button xyz = findViewById(R.id.button4);
         startAPICall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
