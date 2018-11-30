@@ -9,38 +9,93 @@
     android:weightSum="100"
     tools:context=".MainActivity">
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|center_vertical" />
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:gravity="top|center_horizontal"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/startAPICall"
+        <TextView
+            android:id="@+id/APL TEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="balance-sheet-statement/AAPL"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start API Call" />
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:text="This app is for basic information of the balance sheet of Apple Inc. Click on each button, to show the information of each detail" />
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="             2013 – 2019" />
+
+        <Button
+            android:id="@+id/Inventories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inventories" />
+
+        <Button
+            android:id="@+id/Receivables"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receivables" />
+
+        <Button
+            android:id="@+id/TotalCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Cash" />
+
+        <Button
+            android:id="@+id/DeferredIncomeTaxes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deferred Income Taxes" />
+
+        <Button
+            android:id="@+id/ShortTermInvestments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ShortTermInvestments" />
+
+        <Button
+            android:id="@+id/CashAndCashEquivalents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CashAndCashEquivalents" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical" />
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
 
             <TextView
                 android:id="@+id/jsonResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
                 android:layout_gravity="start"
+                android:fontFamily="sans-serif-condensed"
                 android:textAlignment="viewStart"
                 android:textColor="@android:color/black" />
         </ScrollView>
+
     </LinearLayout>
 </FrameLayout>
