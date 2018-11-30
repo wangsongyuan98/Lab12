@@ -66,13 +66,13 @@
             android:id="@+id/ShortTermInvestments"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ShortTermInvestments" />
+            android:text="Short Term Investments" />
 
         <Button
             android:id="@+id/CashAndCashEquivalents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CashAndCashEquivalents" />
+            android:text="Cash And Cash Equivalents" />
 
         <ProgressBar
             android:id="@+id/progressBar"

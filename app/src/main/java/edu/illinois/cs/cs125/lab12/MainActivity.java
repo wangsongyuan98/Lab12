@@ -15,6 +15,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import android.widget.TextView;
 
+
 import org.json.JSONObject;
 
 /**
@@ -50,6 +51,36 @@ public final class MainActivity extends AppCompatActivity {
         final Button shortTermInvestments = findViewById(R.id.ShortTermInvestments);
         final Button cashAndCashEquivalents = findViewById(R.id.CashAndCashEquivalents);
 
+
+
+
+
+        // cashAndCashEquivalents
+        cashAndCashEquivalents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                Log.d(TAG, "Start API button clicked");
+                startAPICall();
+            }
+        });
+
+        /** json parsing for extracting useful
+         */
+        JsonParser parser = new JsonParser();
+        JsonObject cce = parser.parse(jsonString).getAsJsonObject();
+        int year1 = cce.get("2013-09").getAsInt();
+        int year2 = cce.get("2014-09").getAsInt();
+        int year3 = cce.get("2015-09").getAsInt();
+        int year4 = cce.get("2016-09").getAsInt();
+        int year5 = cce.get("2013-09").getAsInt();
+
+
+
+
+
+
+
+
         startAPICall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
@@ -57,13 +88,14 @@ public final class MainActivity extends AppCompatActivity {
                 startAPICall();
             }
         });
-        startAPICall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View v) {
-                Log.d(TAG, "Start API button clicked");
-                startAPICall();
-            }
-        });
+
+
+
+
+
+
+
+
         startAPICall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
